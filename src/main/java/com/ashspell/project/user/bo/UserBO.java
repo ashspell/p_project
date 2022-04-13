@@ -1,9 +1,11 @@
 package com.ashspell.project.user.bo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Service;
 
 import com.ashspell.project.user.dao.UserDAO;
+import com.ashspell.project.user.model.User;
 
 @Service
 public class UserBO {
@@ -11,6 +13,8 @@ public class UserBO {
 	@Autowired
 	private UserDAO userDAO;
 	
+	
+	ssmcksks ksmd kakd
 	
 	public int addUser(
 			String loginid,
@@ -23,6 +27,16 @@ public class UserBO {
 		
 	}
 	
+	public User getuser(
+			String loginid ,
+			String password
+			) {
+	
+	
+		
+
+		return userDAO.selectUser(loginid, password);
+	}
 	
 	
 }
