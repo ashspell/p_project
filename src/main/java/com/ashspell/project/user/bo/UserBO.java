@@ -13,8 +13,7 @@ public class UserBO {
 	@Autowired
 	private UserDAO userDAO;
 	
-	
-	ssmcksks ksmd kakd
+
 	
 	public int addUser(
 			String loginid,
