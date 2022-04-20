@@ -5,11 +5,13 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ashspell.project.user.bo.UserBO;
+import com.ashspell.project.user.dao.UserDAO;
 
 @RestController
 @RequestMapping("/project")
@@ -18,7 +20,11 @@ public class UserRestController {
 	@Autowired
 	private UserBO userBO;
 	
-	@GetMapping("/sign_up")
+	@Autowired
+	private UserDAO userDAO;
+	
+	
+	@PostMapping("/sign_up")
 	
 	public Map <String, String> signup(
 			@RequestParam("loginid") String loginid,
@@ -40,4 +46,28 @@ public class UserRestController {
 		
 		return signup ;
 	}
+	
+	@GetMapping("/duplicateid")
+	
+	public String duplicatedid(
+			@RequestParam("loginid") String loginid
+			) {
+	
+		
+		int count = userDAO.selectCountByloginId(loginid);
+		
+		
+		if(duplicatedid != loginid) {
+			
+		}
+		
+	
+		return "";
+	}
+	
+	
+	
+
+	
+	
 }

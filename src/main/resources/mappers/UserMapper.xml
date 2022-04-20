@@ -6,8 +6,8 @@
  <mapper namespace = "com.ashspell.project.user.dao.UserDAO">
  	<insert id ="insertUser" parameterType = "map">
  		INSERT INTO `user`(
- 			`id`
- 			, `loginid`
+ 			
+ 			`loginid`
  			, `password`
  			, `email`
  			, `name`
@@ -15,8 +15,8 @@
  			, `createdAt`
  			, `updatedAt`
  		) value (
- 			#{id}
- 			, #{loginid}
+ 			
+ 			#{loginid}
  			, #{password}
  			, #{email}
  			, #{name}

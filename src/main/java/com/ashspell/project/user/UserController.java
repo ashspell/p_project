@@ -14,12 +14,12 @@ public class UserController {
 	
 	@GetMapping("/signin_view")
 	public String loginview() {
-		return "project/signin";
+		return "project/user/signin";
 	}
 	
 	@GetMapping("/signup_view")
 	public String signupview() {
-		return "project/signup";
+		return "project/user/signup";
 	}
 	
 	@GetMapping("/sign_out") 

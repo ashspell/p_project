@@ -1,9 +1,9 @@
 package com.ashspell.project.user.bo;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
 import org.springframework.stereotype.Service;
 
+import com.ashspell.project.common.EncryptUtils;
 import com.ashspell.project.user.dao.UserDAO;
 import com.ashspell.project.user.model.User;
 
@@ -22,7 +22,10 @@ public class UserBO {
 			String name,
 			String hometown) {
 		
-		return userDAO.insertUser(loginid, password, email, name, hometown);
+		String encryptpassword =  EncryptUtils.md5(password);
+		
+		return userDAO.insertUser(loginid, encryptpassword, email, name, hometown);
+		
 		
 	}
 	
@@ -31,11 +34,18 @@ public class UserBO {
 			String password
 			) {
 	
-	
+		String encryptpassword =  EncryptUtils.md5(password);
 		
-
-		return userDAO.selectUser(loginid, password);
+		return userDAO.selectUser(loginid, encryptpassword);
 	}
+	
+	public boolean isDuplicateId(String loginid) {
+		
+		int count = userDAO.selectCountByloginId(loginid);
+			
+		return (count != 0);
+	}
+	
 	
 	
 }
