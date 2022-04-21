@@ -56,7 +56,7 @@
 					url: "/project/signin",
 					data: {"loginid":loginid, "password":password},
 					success:function(data) {
-						if ("result" == "success") {
+						if (result == "success") {
 							location:href = "/project/list";
 						}else{
 							alert("로그인 실패");

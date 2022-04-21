@@ -29,7 +29,7 @@ public class UserBO {
 		
 	}
 	
-	public User getuser(
+	public User signin(
 			String loginid ,
 			String password
 			) {
@@ -43,7 +43,12 @@ public class UserBO {
 		
 		int count = userDAO.selectCountByloginId(loginid);
 			
-		return (count != 0);
+		if(count == 0) { //아이디 중복체크를 해서 중복수가 0이면 
+			return false;
+		}else {
+			return true;
+		}
+		
 	}
 	
 	

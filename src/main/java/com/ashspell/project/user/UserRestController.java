@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ashspell.project.user.bo.UserBO;
-import com.ashspell.project.user.dao.UserDAO;
+import com.ashspell.project.user.model.User;
 
 @RestController
 @RequestMapping("/project")
@@ -19,9 +19,6 @@ public class UserRestController {
 	
 	@Autowired
 	private UserBO userBO;
-	
-	@Autowired
-	private UserDAO userDAO;
 	
 	
 	@PostMapping("/sign_up")
@@ -46,28 +43,44 @@ public class UserRestController {
 		
 		return signup ;
 	}
-	
+
 	@GetMapping("/duplicateid")
 	
-	public String duplicatedid(
-			@RequestParam("loginid") String loginid
+	public Map<String, Boolean> duplicateid (
+			@RequestParam("loginid")String loginid
+			){
+		
+		boolean duplicateid = userBO.isDuplicateId(loginid);
+		
+		Map<String, Boolean> isduplicate = new HashMap<>();
+		
+		isduplicate.put("isDuplicateId", duplicateid);
+		
+		
+		
+		return isduplicate;
+		
+		
+	}
+
+	@PostMapping("/signin")
+	
+	public Map<String, String> signin(
+			@RequestParam("loginid") String loginid,
+			@RequestParam("password") String password
 			) {
-	
 		
-		int count = userDAO.selectCountByloginId(loginid);
+		User signin = userBO.signin(loginid, password);
 		
+		 Map<String, String> result = new HashMap<>();
 		
-		if(duplicatedid != loginid) {
-			
-		}
+		 
 		
-	
-		return "";
+		return ;
 	}
 	
 	
 	
+	
 
-	
-	
 }

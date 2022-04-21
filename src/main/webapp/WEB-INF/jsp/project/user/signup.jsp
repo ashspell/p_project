@@ -49,9 +49,12 @@
 	</div>
 	
 	
-	<script>
+	<script type="text/javascript">
 	
 		$(document).ready(function(){
+			
+			
+			
 			
 			$("#signupBtn").on("click", function(){
 				
@@ -125,27 +128,36 @@
 			
 			$("#confirmBtn").on("click",function(){
 				
-				let loginid = $("#loginid").val();
+				let loginid = $("#idInput").val();
+				
 				
 				if(loginid == "") {
 					alert("아이디를 입력하세요");
 					return;
 				}
+			
+			
+				$.ajax({
 				
-			$.ajax({
-				type :"get",
-				url : "/project/duplicateid",
-				data : {"loginid":loginid},
-				success:function(data) {
-					if(data.duplicateid) {
-						alert("사용할수있는 아이디입니다");
-					}else{
-						alert("사용할수없는 아이디입니다");
+					type :"get",
+					url : "/project/duplicateid",
+					data : {"loginid":loginid},
+					success:function(data) {
+						
+					
+						
+						if(data.duplicateid) {
+							alert("사용할수있는 아이디입니다");
+						}else{
+							alert("사용할수없는 아이디입니다");
+						}
+					},
+					
+					error:function() {
+						alert("아이디 중복체크 에러");
 					}
-				}
-				
-				
-			});
+		
+				});
 			
 				
 			});
