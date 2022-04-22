@@ -3,6 +3,9 @@ package com.ashspell.project.user;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -54,7 +57,7 @@ public class UserRestController {
 		
 		Map<String, Boolean> isduplicate = new HashMap<>();
 		
-		isduplicate.put("isDuplicateId", duplicateid);
+		isduplicate.put("duplicate", duplicateid);
 		
 		
 		
@@ -67,20 +70,36 @@ public class UserRestController {
 	
 	public Map<String, String> signin(
 			@RequestParam("loginid") String loginid,
-			@RequestParam("password") String password
+			@RequestParam("password") String password,
+			HttpServletRequest request
 			) {
 		
-		User signin = userBO.signin(loginid, password);
 		
-		 Map<String, String> result = new HashMap<>();
+		Map<String, String> result = new HashMap<>();
 		
-		 
+		User user = userBO.user(loginid, password);
 		
-		return ;
-	}
-	
-	
-	
-	
+		if(user != null) {
+			result.put("result", "success");
+			
+			HttpSession session = request.getSession();
+			
+			session.setAttribute("id", user.getId());
+			session.setAttribute("loginid", user.getLoginid());
+			
+			
+			
+			
+		}else {
+			result.put("result", "fail");
+		}
+		
+		
+		
+		return result;
+		
+		
+		
+  }
 
 }

@@ -29,7 +29,7 @@ public class UserBO {
 		
 	}
 	
-	public User signin(
+	public User user(
 			String loginid ,
 			String password
 			) {

@@ -57,9 +57,9 @@
 					data: {"loginid":loginid, "password":password},
 					success:function(data) {
 						if (result == "success") {
-							location:href = "/project/list";
+							location:href = "/project/main";
 						}else{
-							alert("로그인 실패");
+							alert("가입되지않은 유저입니다");
 						}
 						
 						error:function(){

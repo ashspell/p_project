@@ -1,5 +1,7 @@
 package com.ashspell.project.post.model;
 
+import java.util.Date;
+
 public class PostUser {
 
 	private String postid;
@@ -11,6 +13,10 @@ public class PostUser {
 	private String content;
 	
 	private String filepath;
+	
+	private Date createdAt;
+	
+	private Date updatedAt;
 
 	public String getPostid() {
 		return postid;
@@ -51,6 +57,24 @@ public class PostUser {
 	public void setFilepath(String filepath) {
 		this.filepath = filepath;
 	}
+
+	public Date getCreatedAt() {
+		return createdAt;
+	}
+
+	public void setCreatedAt(Date createdAt) {
+		this.createdAt = createdAt;
+	}
+
+	public Date getUpdatedAt() {
+		return updatedAt;
+	}
+
+	public void setUpdatedAt(Date updatedAt) {
+		this.updatedAt = updatedAt;
+	}
+	
+	
 	
 	
 }

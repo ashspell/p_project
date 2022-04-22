@@ -146,10 +146,10 @@
 						
 					
 						
-						if(data.duplicateid) {
-							alert("사용할수있는 아이디입니다");
-						}else{
+						if(data.duplicate) {
 							alert("사용할수없는 아이디입니다");
+						}else{
+							alert("사용할수있는 아이디입니다");
 						}
 					},
 					
