@@ -14,3 +14,6 @@ public interface PostDAO {
 			@Param("filepath") String filepath);
 			
 }
+	
+	
+
