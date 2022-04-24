@@ -19,13 +19,15 @@
 	
 	<div id = "wrap">
 		
-		<h3>업로드</h3>
+		<label>업로드</label>
 		<textarea class = "form-cotnrol mt-3"></textarea>
 		<button class = "btn btn-info mt-3" id = "fileBtn"><i class="bi bi-upload"></i>파일 업로드</button>
 		<button class = "button form-control">게시글 작성완료</button>
 	
-
 	</div>	
+	
+	
+	
 	
 	<c:import url = "/WEB-INF/jsp/includes/footer.jsp"></c:import>	
 </body>
