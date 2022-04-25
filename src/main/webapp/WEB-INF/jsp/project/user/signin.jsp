@@ -57,7 +57,7 @@
 					data: {"loginid":loginid, "password":password},
 					success:function(data) {
 						if (result == "success") {
-							location:href = "/project/main";
+							location:href = "/project/main_view";
 						}else{
 							alert("가입되지않은 유저입니다");
 						}

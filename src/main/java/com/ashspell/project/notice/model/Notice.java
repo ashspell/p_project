@@ -1,9 +1,8 @@
-package com.ashspell.project.post.model;
+package com.ashspell.project.notice.model;
 
 import java.util.Date;
 
 public class Notice {
-
 	
 	private String adminid;
 	
@@ -54,6 +53,5 @@ public class Notice {
 	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
 	}
-	
 	
 }

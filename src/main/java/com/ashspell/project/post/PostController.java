@@ -10,22 +10,19 @@ public class PostController {
 	
 	@GetMapping("/main_view")
 	public String mainview() {
-		return("/project/post/mainview");
+		return "/project/post/mainview";
 	}
 	
-	@GetMapping("notice_view")
-	public String noticeview() {
-		return("/project/post/notice");
-	}
+
 	
-	@GetMapping("upload_view")
+	@GetMapping("/upload_view")
 	public String uploadview() {
-		return("/project/post/upload");
+		return"/project/post/upload";
 	}
 	
-	@GetMapping("list_view")
+	@GetMapping("/list_view")
 	public String listview() {
-		return("/project/post/list");
+		return "/project/post/list";
 	}
 	
 	

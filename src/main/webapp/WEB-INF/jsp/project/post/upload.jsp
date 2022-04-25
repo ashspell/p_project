@@ -30,5 +30,7 @@
 	
 	
 	<c:import url = "/WEB-INF/jsp/includes/footer.jsp"></c:import>	
+	
+	
 </body>
 </html>

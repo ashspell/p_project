@@ -12,8 +12,11 @@ public interface PostDAO {
 			@Param("hometown") String hometown,
 			@Param("content") String content,
 			@Param("filepath") String filepath);
-			
+	
+	
+	
 }
+	
 	
 	
 
