@@ -4,6 +4,9 @@ import java.util.Date;
 
 public class Notice {
 	
+	private int id;
+	
+	
 	private String adminid;
 	
 	private String noticetitle;
@@ -14,6 +17,18 @@ public class Notice {
 	
 	private Date updatedAt;
 
+	
+	
+	
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
 	public String getAdminid() {
 		return adminid;
 	}
@@ -22,6 +37,7 @@ public class Notice {
 		this.adminid = adminid;
 	}
 
+	
 	public String getNoticetitle() {
 		return noticetitle;
 	}

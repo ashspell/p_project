@@ -12,7 +12,7 @@
 </head>
 <body>
 	<div id = "wrap">
-			<small>ashspell 2022. All rights reserved</small>
+			<div></div>
 	</div>
 </body>
 </html>

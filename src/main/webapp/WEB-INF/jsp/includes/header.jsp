@@ -12,7 +12,7 @@
 </head>
 <body>
 
-		<div class = "bg-info d-flex form-control">
+		<div class = " d-flex form-control">
 			<h3>P_project</h3>
 			<label>ashspell 님 </label>
 			<a href ="/project/signin_view">로그아웃</a>

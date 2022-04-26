@@ -10,9 +10,13 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+    <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
     	<link rel = "stylesheet" href = "/static/css/style.css" type = "text/css">
 </head>
 <body>
+
+	<c:import url = "/WEB-INF/jsp/includes/header.jsp"></c:import>
+	
 	<div id = "wrap">
 		<h3 class = "text-center">공지사항</h3>
 		<table class ="table form-control">
@@ -20,29 +24,24 @@
 				<tr>
 					<th>순번</th>
 					<th>제목</th>
-					<th>작성일</th>
+					<th>작성일</th>	
 				</tr>
 			</thead>
 			<tbody>
-				
-				<tr>
-				
-					<td></td>
-					<td></td>
-					<td></td>
-					
+				<c:forEach var = "noticelist" items = "${noticelist}">
+				 <tr>
+					<th>${noticelist.id}</th>
+					<th>${noticelist.noticetitle}</th>
+					<th><fmt:formatDate pattern ="yyyy-MM-dd" value="${noticelist.createdAt}"/></th>
 				</tr>
-					
+				</c:forEach>
 			</tbody>
-			
-			
-		
-		
-		
-		
 		</table>
-	
-	
+		
+		<button class = "btn btn-info" onclick = "location.href=`/project/noticeupload_view`">공지 업로드</button>
 	</div>
+	
+	<c:import url= "/WEB-INF/jsp/includes/footer.jsp"></c:import>
+	
 </body>
 </html>

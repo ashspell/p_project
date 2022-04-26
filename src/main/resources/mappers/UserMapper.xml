@@ -26,6 +26,25 @@
  		)
  	</insert>
  	
+ 	
+ 	<select id = "selectUser" parameterType = "map" resultType = "com.ashspell.project.user.model.User">
+ 		SELECT
+ 			`id`
+ 			, `loginid`
+ 			, `password`
+ 			, `email`
+ 			, `name`
+ 			, `hometown`
+ 			, `createdAt`
+ 			, `updatedAt`
+ 		FROM
+ 			`user`
+ 		WHERE 
+ 		`loginid` = #{loginid} AND
+ 		`password` = #{password}
+ 	</select>
+ 	
+ 	
  	<select id = "selectCountByloginId" parameterType = "string" resultType = "int">
  		SELECT 
  			count(1)

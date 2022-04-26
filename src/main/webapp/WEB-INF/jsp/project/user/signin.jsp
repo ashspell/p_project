@@ -56,15 +56,15 @@
 					url: "/project/signin",
 					data: {"loginid":loginid, "password":password},
 					success:function(data) {
-						if (result == "success") {
-							location:href = "/project/main_view";
+						if (data.result == "success") {
+							location.href = "/project/main_view";
 						}else{
 							alert("가입되지않은 유저입니다");
 						}
 						
-						error:function(){
-							alert("로그인 에러");
-						}
+					},
+					error:function(){
+						alert("로그인 에러");
 					}
 					
 				});
