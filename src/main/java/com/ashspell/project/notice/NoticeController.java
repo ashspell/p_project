@@ -12,6 +12,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+
+
 import com.ashspell.project.notice.bo.NoticeBO;
 import com.ashspell.project.notice.model.Notice;
 
@@ -42,8 +44,14 @@ public class NoticeController {
 		return"/project/post/noticeupload";
 	}
 	
-	@GetMapping("/noticedetail_view")
-	public String noticedetail() {
+	@GetMapping("/noticedetail_view") 
+	public String noticedetail(Model model) {
+			
+		List<Notice> notice = noticeBO.getnotice();
+		
+		model.addAttribute("notice", notice);
+		
+		
 		return "/project/post/notice_detail";
 	}
 }

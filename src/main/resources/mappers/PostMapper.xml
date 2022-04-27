@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <mapper namespace = "com.ashspell.project.post.PostDAO">
+ 	<insert id = "insertpost" parameterType = "map">
+ 		INSERT INTO `post`(
+ 			`id`,
+ 			`postid`,
+ 			`title`,
+ 			`hometown`,
+ 			`content`,
+ 			`filepath`,
+ 			`createdAt`,
+ 			`updatedAt`
+ 		)value(
+ 			#{id},
+ 			#{postid},
+ 			#{title},
+ 			#{hometown},
+ 			#{content},
+ 			#{filepath},
+ 			now(),
+ 			now()
+ 		)
+ 	</insert>
+ 	
+ 	
+ 	
+ </mapper>

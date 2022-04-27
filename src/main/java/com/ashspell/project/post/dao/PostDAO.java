@@ -1,7 +1,12 @@
 package com.ashspell.project.post.dao;
 
+
+
+
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
+
+
 
 @Repository
 public interface PostDAO {
@@ -14,7 +19,7 @@ public interface PostDAO {
 			@Param("filepath") String filepath);
 	
 	
-	
+
 }
 	
 	

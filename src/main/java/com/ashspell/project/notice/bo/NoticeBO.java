@@ -4,8 +4,10 @@ package com.ashspell.project.notice.bo;
 
 import java.util.List;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 
 import com.ashspell.project.notice.dao.NoticeDAO;
 import com.ashspell.project.notice.model.Notice;
@@ -33,8 +35,11 @@ public class NoticeBO {
 		
 		return noticeDAO.selectNoticeList();
 	}
+	
 
-	
-	
+	public List<Notice> getnotice() {
+		
+		return noticeDAO.selectNotice();
+	}
 	
 }

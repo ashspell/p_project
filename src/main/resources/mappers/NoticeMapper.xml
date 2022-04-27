@@ -28,11 +28,18 @@
  	FROM `adminpost`
  	
  	ORDER BY `id` DESC
- 	
- 
  
  </select>
  
+ <select id = "selectNoticedetail" parameterType = "int" resultType = "com.ashspell.project.notice.model.Notice">
+ 	SELECT
+ 		`id`,
+ 		`noticetitle`,
+ 		`createdAt`,
+ 		`noticecontent`
+ 	FROM `adminpost`
+ 
+ </select>
  
  
  

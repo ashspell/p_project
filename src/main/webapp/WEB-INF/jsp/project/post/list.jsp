@@ -13,7 +13,7 @@
     	<link rel = "stylesheet" href = "/static/css/style.css" type = "text/css">
 </head>
 <body>
-	<c:import ></c:import>
+	
 	<div id = "wrap">
 		
 	

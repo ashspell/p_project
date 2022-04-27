@@ -2,6 +2,8 @@ package com.ashspell.project.notice.dao;
 
 
 
+
+
 import java.util.List;
 
 import org.apache.ibatis.annotations.Param;
@@ -19,8 +21,8 @@ public interface NoticeDAO {
 			@Param("noticecontent") String noticecontent
 			);
 
-	public List<Notice> selectNoticeList(
-			
-			);
+	public List<Notice> selectNoticeList();
+	
+	public List<Notice> selectNotice();
 	
 }

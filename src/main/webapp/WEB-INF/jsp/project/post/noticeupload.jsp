@@ -53,6 +53,7 @@
 				data : {"noticetitle":noticetitle, "noticecontent":noticecontent},
 				success:function(data) {
 					if(data.result == "success") {
+						
 						location.href ="/project/notice_view"
 					}else{
 						alert("공지사항 업로드 실패");
