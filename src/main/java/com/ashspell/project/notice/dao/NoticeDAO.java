@@ -8,6 +8,7 @@ package com.ashspell.project.notice.dao;
 
 import java.util.List;
 
+
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
@@ -25,4 +26,11 @@ public interface NoticeDAO {
 	public List<Notice> selectNoticeList();
 	
 	public Notice selectnotice (@Param("id") int id);
+	
+	public int updatenotice(
+			@Param("id") int id,
+			@Param("noticetitle") String noticetitle,
+			@Param("noticecontent") String noticecontent
+			
+			);
 }
