@@ -17,7 +17,7 @@ public class PostBO {
 	private PostDAO postDAO;
 	
 	public int addPost(
-			 int postid,
+			 String postid,
 			 String title,
 			 String hometown,
 			 String content,

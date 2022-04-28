@@ -4,15 +4,12 @@ package com.ashspell.project.notice;
 
 import java.util.List;
 
-
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.ashspell.project.notice.bo.NoticeBO;
 import com.ashspell.project.notice.model.Notice;
@@ -35,23 +32,25 @@ public class NoticeController {
 		
 		model.addAttribute("noticelist" ,noticelist);
 		
-		return"/project/post/notice";
+		return"/project/notice/notice";
 		
 	}
 	
 	@GetMapping("/noticeupload_view")
 	public String noticeupload() {
-		return"/project/post/noticeupload";
+		return"/project/notice/noticeupload";
 	}
 	
 	@GetMapping("/noticedetail_view") 
-	public String noticedetail(Model model) {
+	public String noticedetail(@RequestParam("id") int id,Model model) {
 			
-		List<Notice> notice = noticeBO.getnotice();
+		Notice noticedetail = noticeBO.getnotice(id);
 		
-		model.addAttribute("notice", notice);
+		model.addAttribute("noticedetail", noticedetail);
 		
 		
-		return "/project/post/notice_detail";
+		return "/project/notice/notice_detail";
 	}
+	
+	
 }

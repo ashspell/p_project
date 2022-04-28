@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title></title>
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -16,33 +16,66 @@
 <body>
 
 	<c:import url = "/WEB-INF/jsp/includes/header.jsp"></c:import>
-	
+
 	<div id = "wrap">
-		<h3 class = "text-center">공지사항</h3>
-		<table class ="table form-control" id = "noticebox">
-			<thead>
-				<tr>
-					<th>순번</th>
-					<th>제목</th>
-					<th>작성일</th>	
-				</tr>
-			</thead>
-			<tbody>
-				<c:forEach var = "noticelist" items = "${noticelist}">
-				 <tr>
-					<th>${noticelist.id}</th>
-					<th><a href = "/project/noticedetail_view?id=${noticelist.id}">${noticelist.noticetitle}</a></th>
-					<th><fmt:formatDate pattern ="yyyy-MM-dd" value="${noticelist.createdAt}"/></th>
-				</tr>
-				</c:forEach>
-			</tbody>
-		</table>
-		<c:if test = "${loginid == 'ashspell'}">
-		<button class = "btn btn-info" onclick = "location.href=`/project/noticeupload_view`">공지 업로드</button>
-		</c:if>
-	</div>
+		
+				
+				<table class = "table table-bordered form-control">
+					<thead>
+						<tr>
+							<th>제목</th>
+							<th>등록일</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>${noticedetail.noticetitle }</td>
+							<td><fmt:formatDate pattern ="yyyy-MM-dd" value="${noticedetail.createdAt}"/></td>
+						</tr>
+					</tbody>
+				</table>
+				
+				${noticedetail.noticecontent}
+				
+			</div>
+		
+		<button type = "button" class = "btn btn-info" onclick= "location.href=`/project/notice_view`">목록</button>
+		<button type = "button" class = "btn btn-primary" onclick = "location.href=">수정</button>	
+		<button type = "button" class = "btv btn-danger" id = "deleteBtn" onclick = "">삭제</button>			
+	
 	
 	<c:import url= "/WEB-INF/jsp/includes/footer.jsp"></c:import>
+	
+	
+	
+	
+	<script>
+		$(document).ready(function(){
+			
+			$(#deleteBtn).on("click", function(){
+				
+				let id = $("#id").val();
+				let noticetitle = $("#noticetitle").val();
+				let noticecontent = $("#noticecontent").val();
+				
+				
+				
+				
+			});
+		});
+		
+		
+	
+	
+	
+	</script>
+	
+	
+	
+	
+	
+	
+	
 	
 </body>
 </html>

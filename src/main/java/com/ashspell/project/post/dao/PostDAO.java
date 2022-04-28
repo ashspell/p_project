@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 public interface PostDAO {
 
 	public int insertPost(
-			@Param("postid") int postid,
+			@Param("postid") String postid,
 			@Param("title") String title,
 			@Param("hometown") String hometown,
 			@Param("content") String content,

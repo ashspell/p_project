@@ -37,9 +37,9 @@ public class NoticeBO {
 	}
 	
 
-	public List<Notice> getnotice() {
+	public Notice getnotice(int id) {
 		
-		return noticeDAO.selectNotice();
+		return noticeDAO.selectnotice(id);
 	}
 	
 }

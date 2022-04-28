@@ -25,19 +25,23 @@
  		`id`,
  		`noticetitle`,
  		`createdAt`
+ 		
  	FROM `adminpost`
  	
  	ORDER BY `id` DESC
  
  </select>
  
- <select id = "selectNoticedetail" parameterType = "int" resultType = "com.ashspell.project.notice.model.Notice">
+ <select id = "selectnotice" parameterType = "int" resultType = "com.ashspell.project.notice.model.Notice">
  	SELECT
  		`id`,
  		`noticetitle`,
  		`createdAt`,
  		`noticecontent`
+ 		
  	FROM `adminpost`
+ 	
+ 	WHERE `id` = #{id}
  
  </select>
  
