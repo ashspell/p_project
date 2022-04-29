@@ -45,6 +45,27 @@
  
  </select>
  
+ <delete id = "deletenotice" parameterType = "int">
+ 	DELETE FROM
+ 		`adminpost`
+ 		
+ 	WHERE `id` = #{id}
+ 
+ </delete>
+ 
+ <update id = "updatenotice" parameterType = "map">
+ 	UPDATE `adminpost`
+ 	SET
+ 		`noticetitle` = #{noticetitle},
+ 		`noticecontent`= #{noticecontent},
+ 		`updatedAt` = now()
+ 	WHERE
+ 		`id` = #{id}
+ 	
+ 
+ 	
+ </update>
+ 
  
  
  

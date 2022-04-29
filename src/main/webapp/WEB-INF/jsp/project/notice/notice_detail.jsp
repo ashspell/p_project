@@ -40,8 +40,10 @@
 			</div>
 		
 		<button type = "button" class = "btn btn-info" onclick= "location.href=`/project/notice_view`">목록</button>
-		<button type = "button" class = "btn btn-primary" onclick = "location.href=">수정</button>	
-		<button type = "button" class = "btv btn-danger" id = "deleteBtn" onclick = "">삭제</button>			
+		
+		<button type = "submit" class = "btn btn-primary" id = "updateBtn" data-id = "${noticedetail.id }">수정</button>
+			
+		<button type = "submit" class = "btn btn-danger" id = "deleteBtn" data-id = "${noticedetail.id }" >삭제</button>			
 	
 	
 	<c:import url= "/WEB-INF/jsp/includes/footer.jsp"></c:import>
@@ -52,17 +54,68 @@
 	<script>
 		$(document).ready(function(){
 			
-			$(#deleteBtn).on("click", function(){
+			$("#deleteBtn").on("click", function(){
 				
-				let id = $("#id").val();
-				let noticetitle = $("#noticetitle").val();
-				let noticecontent = $("#noticecontent").val();
+				alert("게시글을 삭제합니다");
+					
+				let id = $(this).data("id");
+			
+			$.ajax({
 				
-				
-				
+				type:"get",
+				url: "/project/deletenotice",
+				data: {"id":id},
+				success:function(data) {
+					if(data.result == "success") {
+						
+					return location.href = "/project/notice_view";
+						
+					}else{
+						alert("게시글 삭제 실패");
+					} 
+				},
+				error:function() {
+					alert("게시글 삭제 에러");
+				}
 				
 			});
+					
 		});
+			
+				$("#updateBtn").on("click", function(){
+				
+				let noticetitle = $("noticetitle").val();
+				let noticecontent = $("noticecontent").val();
+				
+					
+				
+				let id = $(this).data("id");
+			
+				alert (noticetitle + " " + noticecontent +  " " + id);
+				
+			$.ajax({
+				
+				type:"post",
+				url: "/project/updatenotice",
+				data: {"id":id, "noticetitle":noticetitle, "noticecontent":noticecontent},
+
+				success:function(data) {
+					if(data.result == "success") {
+						
+					return location.href = "/project/noticeupdate_view";
+						
+					}else{
+						alert("게시글 수정 실패");
+					} 
+				},
+				error:function() {
+					alert("게시글 수정 에러");
+				}
+				
+			});
+					
+		});
+	});
 		
 		
 	

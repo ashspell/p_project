@@ -52,5 +52,10 @@ public class NoticeController {
 		return "/project/notice/notice_detail";
 	}
 	
+	@GetMapping("/noticeupdate_view")
+	public String updatenotice() {
+	
+		return "/project/notice/noticeupdate";
+	}
 	
 }
