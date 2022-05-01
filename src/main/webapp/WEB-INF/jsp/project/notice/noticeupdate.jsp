@@ -16,10 +16,6 @@
 <body>
 	<c:import url = "/WEB-INF/jsp/includes/header.jsp"></c:import>
 
-	<div id = "wrap">
-		
-				
-			<c:import url = "/WEB-INF/jsp/includes/header.jsp"></c:import>
 
 
 			

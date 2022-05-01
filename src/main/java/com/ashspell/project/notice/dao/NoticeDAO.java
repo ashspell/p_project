@@ -38,13 +38,6 @@ public interface NoticeDAO {
 			
 			);
 	
-<<<<<<< HEAD
-	public int deletenotice(
-			@Param("id") int id			
-			);
-	
-=======
 
->>>>>>> a745e77fefbc687dad9375a6f1d4745e1d2546d1
-	
+
 }

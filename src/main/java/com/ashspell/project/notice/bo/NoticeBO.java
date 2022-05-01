@@ -45,12 +45,11 @@ public class NoticeBO {
 		
 		return noticeDAO.deletenotice(id);
 	}
-<<<<<<< HEAD
-=======
+
 	
 	public int updatenotice(int id, String noticetitle, String noticecontent) {
 		
 		return noticeDAO.updatenotice(id, noticetitle, noticecontent );
 	}
->>>>>>> a745e77fefbc687dad9375a6f1d4745e1d2546d1
+
 }

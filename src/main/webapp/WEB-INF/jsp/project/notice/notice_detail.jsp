@@ -40,15 +40,14 @@
 			</div>
 		
 		<button type = "button" class = "btn btn-info" onclick= "location.href=`/project/notice_view`">목록</button>
-<<<<<<< HEAD
+
 		<button type = "button" class = "btn btn-primary" onclick = "location.href=">수정</button>	
-				
-=======
+
 		
 		<button type = "submit" class = "btn btn-primary" id = "updateBtn" data-id = "${noticedetail.id }">수정</button>
 			
 		<button type = "submit" class = "btn btn-danger" id = "deleteBtn" data-id = "${noticedetail.id }" >삭제</button>			
->>>>>>> a745e77fefbc687dad9375a6f1d4745e1d2546d1
+
 	
 	
 	<c:import url= "/WEB-INF/jsp/includes/footer.jsp"></c:import>
@@ -56,9 +55,9 @@
 	
 	
 	
-<<<<<<< HEAD
 
-=======
+
+
 	<script>
 		$(document).ready(function(){
 			
@@ -130,7 +129,7 @@
 	
 	
 	</script>
->>>>>>> a745e77fefbc687dad9375a6f1d4745e1d2546d1
+
 	
 	
 	
