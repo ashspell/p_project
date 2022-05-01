@@ -2,12 +2,11 @@ package com.ashspell.project.notice.bo;
 
 
 
-import java.util.List;
 
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 
 import com.ashspell.project.notice.dao.NoticeDAO;
 import com.ashspell.project.notice.model.Notice;
@@ -46,4 +45,12 @@ public class NoticeBO {
 		
 		return noticeDAO.deletenotice(id);
 	}
+<<<<<<< HEAD
+=======
+	
+	public int updatenotice(int id, String noticetitle, String noticecontent) {
+		
+		return noticeDAO.updatenotice(id, noticetitle, noticecontent );
+	}
+>>>>>>> a745e77fefbc687dad9375a6f1d4745e1d2546d1
 }

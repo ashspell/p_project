@@ -14,43 +14,26 @@
      <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 </head>
 <body>
-
 	<c:import url = "/WEB-INF/jsp/includes/header.jsp"></c:import>
-	
+
 	<div id = "wrap">
-		<h3 class = "text-center">공지사항</h3>
-		<table class ="table table-hover form-control">
-			<thead>
-				<tr>
-					<th>순번</th>
-					<th>제목</th>
-					<th>작성일</th>	
-				</tr>
-			</thead>
-			<tbody>
-				<c:forEach var = "noticelist" items = "${noticelist}">
-				 <tr>
-					<th>${noticelist.id}</th>
-					<th><a href = "/project/noticedetail_view?id=${noticelist.id}">${noticelist.noticetitle}</a></th>
-					<th><fmt:formatDate pattern ="yyyy-MM-dd" value="${noticelist.createdAt}"/></th>
-				</tr>
-				</c:forEach>
-			</tbody>
-		</table>
-		<c:if test = "${loginid == 'ashspell'}">
-<<<<<<< HEAD
-			<button class = "btn btn-info" onclick = "location.href=`/project/noticeupload_view`">공지 업로드</button>
-			<button class = "btn  btn-danger" onclick = ""></button>
-=======
-		<button class = "btn btn-info" onclick = "location.href=`/project/noticeupload_view`" id = "uploadBtn">공지 업로드</button>
->>>>>>> a745e77fefbc687dad9375a6f1d4745e1d2546d1
-		</c:if>
-	</div>
+		
+				
+			<c:import url = "/WEB-INF/jsp/includes/header.jsp"></c:import>
+
+
+			
+			<div id = "wrap">
+				<h3 class = "text-center mt-5">공지사항 수정</h3>
+				<input type = "text" class = "form-control mt-5" id = "noticetitle">
+				<textarea class = "form-control mt-3" id = "noticecontent"></textarea>
+				<button type = "button" class = "form-control mt-3" id = "noticeBtn">업로드</button>
+	
+			</div>
 	
 	<c:import url= "/WEB-INF/jsp/includes/footer.jsp"></c:import>
-
-
-
+	
+			
 	
 </body>
 </html>
