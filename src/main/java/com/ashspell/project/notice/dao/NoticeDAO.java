@@ -33,4 +33,10 @@ public interface NoticeDAO {
 			@Param("noticecontent") String noticecontent
 			
 			);
+	
+	public int deletenotice(
+			@Param("id") int id			
+			);
+	
+	
 }

@@ -42,4 +42,8 @@ public class NoticeBO {
 		return noticeDAO.selectnotice(id);
 	}
 	
+	public int deletenotice(int id) {
+		
+		return noticeDAO.deletenotice(id);
+	}
 }

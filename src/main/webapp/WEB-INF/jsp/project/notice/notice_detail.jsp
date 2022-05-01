@@ -41,7 +41,7 @@
 		
 		<button type = "button" class = "btn btn-info" onclick= "location.href=`/project/notice_view`">목록</button>
 		<button type = "button" class = "btn btn-primary" onclick = "location.href=">수정</button>	
-		<button type = "button" class = "btv btn-danger" id = "deleteBtn" onclick = "">삭제</button>			
+				
 	
 	
 	<c:import url= "/WEB-INF/jsp/includes/footer.jsp"></c:import>
@@ -49,26 +49,7 @@
 	
 	
 	
-	<script>
-		$(document).ready(function(){
-			
-			$(#deleteBtn).on("click", function(){
-				
-				let id = $("#id").val();
-				let noticetitle = $("#noticetitle").val();
-				let noticecontent = $("#noticecontent").val();
-				
-				
-				
-				
-			});
-		});
-		
-		
-	
-	
-	
-	</script>
+
 	
 	
 	
