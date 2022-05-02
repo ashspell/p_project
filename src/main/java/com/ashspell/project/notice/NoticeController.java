@@ -41,6 +41,7 @@ public class NoticeController {
 		return"/project/notice/noticeupload";
 	}
 	
+	
 	@GetMapping("/noticedetail_view") 
 	public String noticedetail(@RequestParam("id") int id,Model model) {
 			
@@ -53,9 +54,15 @@ public class NoticeController {
 	}
 	
 	@GetMapping("/noticeupdate_view")
-	public String updatenotice() {
+	public String updatenotice(@RequestParam("id") int id, Model model)  {
 	
+		
+		Notice noticeupdate = noticeBO.getnotice(id);
+		
+		model.addAttribute("noticedetail", noticeupdate);
+		
 		return "/project/notice/noticeupdate";
-	}
+		}
+
 	
 }

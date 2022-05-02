@@ -36,6 +36,8 @@
 			let noticetitle = $("#noticetitle").val();
 			let noticecontent = $("#noticecontent").val();
 			
+			
+			
 			if(noticetitle == "") {
 				alert("게시글 제목을 정하세요");
 				return;

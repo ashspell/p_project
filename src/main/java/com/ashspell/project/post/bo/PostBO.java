@@ -5,10 +5,13 @@ package com.ashspell.project.post.bo;
 
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.ashspell.project.post.dao.PostDAO;
+import com.ashspell.project.post.model.Post;
 
 @Service
 public class PostBO {
@@ -27,7 +30,17 @@ public class PostBO {
 		
 		return postDAO.insertPost(postid, title, hometown, content, filepath);
 		
+	}
+	
+	public List<Post> getpostlist() {
 		
+		return postDAO.selectPostList();	
+		
+	}
+	
+	public Post getpost(int id) {
+		
+		return postDAO.selectpost(id);
 	}
 	
 

@@ -19,17 +19,66 @@
 
 
 			
-			<div id = "wrap">
-				<h3 class = "text-center mt-5">공지사항 수정</h3>
-				<input type = "text" class = "form-control mt-5" id = "noticetitle">
-				<textarea class = "form-control mt-3" id = "noticecontent"></textarea>
-				<button type = "button" class = "form-control mt-3" id = "noticeBtn">업로드</button>
+				<div id = "wrap">
+					<h3 class = "text-center mt-5">공지사항 수정</h3>
+					<input type = "text" class = "form-control mt-5" id = "noticetitle" value = "${noticedetail.noticetitle }">
+					<textarea class = "form-control mt-3" id = "noticecontent">${noticedetail.noticecontent}</textarea>
+			
+					<button type = "button" class = "form-control mt-3" id = "updateBtn" data-id = "${noticedetail.id }">수정</button>
 	
-			</div>
+				</div>
+	
 	
 	<c:import url= "/WEB-INF/jsp/includes/footer.jsp"></c:import>
 	
+			<script>
 			
+				$(document).ready(function(){
+		
+				$("#updateBtn").on("click", function(){
+			
+			
+					let noticetitle = $("#noticetitle").val();
+					let noticecontent = $("#noticecontent").val();
+			
+					let id = $(this).data("id");
+					
+			
+					
+					
+			$.ajax({
+				type : "post",
+				url : "/project/updatenotice",
+				data : {"id":id, "noticetitle":noticetitle, "noticecontent":noticecontent},
+					success:function(data) {
+					if(data.result == "success") {
+						
+						location.href ="/project/notice_view"
+					}else{
+						alert("공지사항 수정 실패");
+					}
+				},
+				error:function() {
+					alert("공지사항 수정 에러");
+				}
+				
+				
+				
+				
+				
+			});
+			
+			
+			
+			
+		});
+		
+	});
+	</script>
+			
+			
+			
+		
 	
 </body>
 </html>

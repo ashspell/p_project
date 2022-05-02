@@ -2,7 +2,7 @@ package com.ashspell.project.post.model;
 
 import java.util.Date;
 
-public class PostUser {
+public class Post {
 
 	private String postid;
 	

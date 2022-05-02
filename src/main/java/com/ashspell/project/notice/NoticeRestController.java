@@ -105,30 +105,23 @@ public class NoticeRestController {
 	public Map<String, String> updatenotice(
 			@RequestParam("id") int id,
 			@RequestParam("noticetitle") String noticetitle,
-			@RequestParam("noticecontent") String noticecontent,
-			HttpServletRequest request
+			@RequestParam("noticecontent") String noticecontent
 			) {
 		
-		Map <String, String> result = new HashMap<>();
 		
-		HttpSession session = request.getSession();
+		Map<String, String> result = new HashMap<>();
 		
 		int count = noticeBO.updatenotice(id, noticetitle, noticecontent);
 		
 		if(count == 1) {
 			result.put("result", "success");
 		}else {
-			result.put("result", "success");
-
+			result.put("result", "fail");
 		}
 		
 		return result;
+	
 	}
-	
-	
-	
-
-	
 	
 
 }

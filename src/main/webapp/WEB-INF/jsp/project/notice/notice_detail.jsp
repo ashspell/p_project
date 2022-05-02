@@ -41,10 +41,8 @@
 		
 		<button type = "button" class = "btn btn-info" onclick= "location.href=`/project/notice_view`">목록</button>
 
-		<button type = "button" class = "btn btn-primary" onclick = "location.href=">수정</button>	
-
 		
-		<button type = "submit" class = "btn btn-primary" id = "updateBtn" data-id = "${noticedetail.id }">수정</button>
+		<a class = "btn btn-primary" id = "updateBtn"  href = "/project/noticeupdate_view?id=${noticedetail.id }">수정</a>
 			
 		<button type = "submit" class = "btn btn-danger" id = "deleteBtn" data-id = "${noticedetail.id }" >삭제</button>			
 
@@ -89,39 +87,9 @@
 					
 		});
 			
-				$("#updateBtn").on("click", function(){
-				
-				let noticetitle = $("noticetitle").val();
-				let noticecontent = $("noticecontent").val();
-				
-					
-				
-				let id = $(this).data("id");
 			
-				alert (noticetitle + " " + noticecontent +  " " + id);
-				
-			$.ajax({
-				
-				type:"post",
-				url: "/project/updatenotice",
-				data: {"id":id, "noticetitle":noticetitle, "noticecontent":noticecontent},
-
-				success:function(data) {
-					if(data.result == "success") {
-						
-					return location.href = "/project/noticeupdate_view";
-						
-					}else{
-						alert("게시글 수정 실패");
-					} 
-				},
-				error:function() {
-					alert("게시글 수정 에러");
-				}
-				
-			});
-					
-		});
+			
+			
 	});
 		
 		

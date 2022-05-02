@@ -40,9 +40,7 @@
 		<c:if test = "${loginid == 'ashspell'}">
 
 			<button class = "btn btn-info" onclick = "location.href=`/project/noticeupload_view`">공지 업로드</button>
-			<button class = "btn  btn-danger" onclick = ""></button>
-
-		<button class = "btn btn-info" onclick = "location.href=`/project/noticeupload_view`" id = "uploadBtn">공지 업로드</button>
+	
 
 		</c:if>
 	</div>

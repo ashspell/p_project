@@ -27,17 +27,17 @@ public interface NoticeDAO {
 	
 	public Notice selectnotice (@Param("id") int id);
 	
-	public int updatenotice(
-			@Param("id") int id,
-			@Param("noticetitle") String noticetitle,
-			@Param("noticecontent") String noticecontent
-			);
+
 	
 	public int deletenotice(
 			@Param("id") int id
 			
 			);
 	
-
+	public int updatenotice (
+			@Param("id") int id,
+			@Param("noticetitle") String noticetitle,
+			@Param("noticecontent") String noticecontent					
+			);
 
 }

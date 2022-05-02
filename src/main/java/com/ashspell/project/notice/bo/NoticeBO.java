@@ -46,10 +46,8 @@ public class NoticeBO {
 		return noticeDAO.deletenotice(id);
 	}
 
-	
-	public int updatenotice(int id, String noticetitle, String noticecontent) {
+	public int updatenotice( int id, String noticetitle, String noticecontent) {
 		
-		return noticeDAO.updatenotice(id, noticetitle, noticecontent );
+		return noticeDAO.updatenotice(id, noticetitle, noticecontent);
 	}
-
 }
