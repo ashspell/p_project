@@ -26,6 +26,15 @@ public interface PostDAO {
 	public List<Post> selectPostList();
 	
 	public Post selectpost (@Param("id") int id);
+	
+	public int deletepost(@Param("id") int id);
+	
+	public int updatepost(
+			@Param("id") int id,
+			@Param("title") String title,
+			@Param("content") String content,
+			@Param("filepath") String filepath
+			);
 
 }
 	

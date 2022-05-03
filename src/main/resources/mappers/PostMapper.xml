@@ -25,6 +25,54 @@
  		)
  	</insert>
  	
+ 	<select id = "selectpostlist" parameterType = "int" resultType = "com.ashspell.project.post.model.Post">
+ 		SELECT 
+ 			`postid`,
+ 			`title`,
+ 			`hometown`,
+ 			`createdAt`
+ 			
+ 		FROM
+ 			`post`
+ 		
+ 		ORDER BY `id` DESC
+ 	
+ 	</select>
+ 	
+ 	<select id = "selectpost" parameterType = "int" resultType= "com.ashspell.project.post.model.Post">
+ 		SELECT
+ 			`postid`,
+ 			`title`,
+ 			`hometown`,
+ 			`content`,
+ 			`filepath`,
+ 			`createdAt`,
+ 			`updatedAt`
+ 		FROM
+ 			`post`
+ 		WHERE
+ 			`id` = #{id}
+ 	</select>
+ 	
+ 	<delete id = "deletepost" parameterType = "int">
+ 		DELETE FROM 
+ 			`post`
+ 		WHERE 
+ 			`id` = #{id}
+ 	</delete>
+ 	
+ 	<update id = "updatepost" parameterType = "int">
+ 		UPDATE `post`
+ 		SET
+ 			`title` = #{title},
+ 			`content` = #{content},
+ 			`filepath` = #{filepath},
+ 			`createdAt` = now();
+ 		WHERE
+ 			`id` = #{id}
+ 	
+ 	</update>
+ 	
  	
  	
  </mapper>

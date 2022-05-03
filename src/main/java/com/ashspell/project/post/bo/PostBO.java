@@ -43,7 +43,16 @@ public class PostBO {
 		return postDAO.selectpost(id);
 	}
 	
-
+	public int deletepost(int id) {
+		
+		return postDAO.deletepost(id);
+	}
+	
+	public int updatepost(int id, String title, String content, String filepath) {
+		
+		return postDAO.updatepost(id, title, content, filepath);
+	}
+ 
 	
 	
 
