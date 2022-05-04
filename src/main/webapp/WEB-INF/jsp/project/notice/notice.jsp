@@ -30,9 +30,9 @@
 			<tbody>
 				<c:forEach var = "noticelist" items = "${noticelist}">
 				 <tr>
-					<th>${noticelist.id}</th>
-					<th><a href = "/project/noticedetail_view?id=${noticelist.id}">${noticelist.noticetitle}</a></th>
-					<th><fmt:formatDate pattern ="yyyy-MM-dd" value="${noticelist.createdAt}"/></th>
+					<td>${noticelist.id}</td>
+					<td><a href = "/project/noticedetail_view?id=${noticelist.id}">${noticelist.noticetitle}</a></td>
+					<td><fmt:formatDate pattern ="yyyy-MM-dd" value="${noticelist.createdAt}"/></td>
 				</tr>
 				</c:forEach>
 			</tbody>

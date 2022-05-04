@@ -2,34 +2,28 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
  
- <mapper namespace = "com.ashspell.project.post.PostDAO">
+ <mapper namespace = "com.ashspell.project.post.dao.PostDAO">
  	<insert id = "insertpost" parameterType = "map">
  		INSERT INTO `post`(
- 			`id`,
- 			`postid`,
  			`title`,
  			`hometown`,
  			`content`,
- 			`filepath`,
  			`createdAt`,
  			`updatedAt`
  		)value(
- 			#{id},
- 			#{postid},
  			#{title},
  			#{hometown},
  			#{content},
- 			#{filepath},
  			now(),
  			now()
  		)
  	</insert>
  	
- 	<select id = "selectpostlist" parameterType = "int" resultType = "com.ashspell.project.post.model.Post">
+ 	<select id = "selectPostList" parameterType = "int" resultType = "com.ashspell.project.post.model.Post">
  		SELECT 
- 			`postid`,
+ 			`id`,
  			`title`,
- 			`hometown`,
+ 			`content`,
  			`createdAt`
  			
  		FROM
@@ -41,11 +35,8 @@
  	
  	<select id = "selectpost" parameterType = "int" resultType= "com.ashspell.project.post.model.Post">
  		SELECT
- 			`postid`,
  			`title`,
- 			`hometown`,
  			`content`,
- 			`filepath`,
  			`createdAt`,
  			`updatedAt`
  		FROM

@@ -23,8 +23,6 @@ public class NoticeBO {
 			String noticetitle,
 			String noticecontent
 			
-			
-			
 			) {
 		
 		return noticeDAO.insertAdminPost(noticetitle, noticecontent);

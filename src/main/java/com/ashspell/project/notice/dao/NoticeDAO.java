@@ -19,6 +19,7 @@ public interface NoticeDAO {
 	
 
 	public int insertAdminPost(
+			
 			@Param("noticetitle") String noticetitle,
 			@Param("noticecontent") String noticecontent
 			);

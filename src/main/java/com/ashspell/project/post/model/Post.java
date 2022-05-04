@@ -4,6 +4,8 @@ import java.util.Date;
 
 public class Post {
 
+	private String id;
+	
 	private String postid;
 	
 	private String title;
@@ -17,6 +19,18 @@ public class Post {
 	private Date createdAt;
 	
 	private Date updatedAt;
+
+	
+	
+	
+	
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
 
 	public String getPostid() {
 		return postid;

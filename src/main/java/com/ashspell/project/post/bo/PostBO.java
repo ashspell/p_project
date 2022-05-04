@@ -20,15 +20,14 @@ public class PostBO {
 	private PostDAO postDAO;
 	
 	public int addPost(
-			 String postid,
 			 String title,
-			 String hometown,
-			 String content,
-			 String filepath) {
+			String hometown,
+			 String content
+			 ) {
 		
 		
 		
-		return postDAO.insertPost(postid, title, hometown, content, filepath);
+		return postDAO.insertpost(title, hometown, content);
 		
 	}
 	

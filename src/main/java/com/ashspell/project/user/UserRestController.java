@@ -86,6 +86,7 @@ public class UserRestController {
 			
 			session.setAttribute("id", user.getId());
 			session.setAttribute("loginid", user.getLoginid());
+			session.setAttribute("hometown", user.getHometown());
 			
 			
 			

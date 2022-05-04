@@ -27,7 +27,6 @@ public class NoticeController {
 		
 
 		
-		
 		List<Notice> noticelist = noticeBO.getnoticelist();
 		
 		model.addAttribute("noticelist" ,noticelist);

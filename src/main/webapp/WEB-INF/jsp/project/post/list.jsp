@@ -24,19 +24,19 @@
 			<thead>
 				<tr>
 					<th>순번</th>
-					<th>작성자</th>
 					<th>제목</th>
+					<th>지역</th>
 					<th>작성일</th>	
 				</tr>
 			</thead>
 			<tbody>
 				<c:forEach var = "postlist" items = "${postlist}">
-				 <tr>
-					<th>${postlist.id}</th>
-					<th>${postlist.postid }</th>
-					<th><a href = "/project/postdetail_view?id=${postlist.id}">${postlist.title}</a></th>
-					<th><fmt:formatDate pattern ="yyyy-MM-dd" value="${postlist.createdAt}"/></th>
-				</tr>
+				 	<tr>
+						<td>${postlist.id}</td>
+						<td><a href = "/project/listdetail_view?id=${postlist.id}">${postlist.title}</a></td>
+						<td>${postlist.hometown }</td>
+						<td><fmt:formatDate pattern ="yyyy-MM-dd" value="${postlist.createdAt}"/></td>
+					</tr>
 				</c:forEach>
 			</tbody>
 		</table>
@@ -51,6 +51,6 @@
 	<c:import url= "/WEB-INF/jsp/includes/footer.jsp"></c:import>
 		
 	
-	</div>
+	
 </body>
 </html>
