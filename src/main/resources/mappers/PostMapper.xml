@@ -23,6 +23,7 @@
  		SELECT 
  			`id`,
  			`title`,
+ 			`hometown`,
  			`content`,
  			`createdAt`
  			
