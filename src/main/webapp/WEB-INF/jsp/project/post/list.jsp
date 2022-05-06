@@ -20,6 +20,18 @@
 	
 	<div id = "wrap">
 		<h3 class = "text-center">게시판</h3>
+		<select id = "hometown">
+			<option>전체</option>
+			<option>경기도</option>
+			<option>강원도</option>
+			<option>충청남도</option>
+			<option>충청북도</option>
+			<option>경상남도</option>
+			<option>경상북도</option>
+			<option>전라북도</option>
+			<option>전라남도</option>
+			<option>제주도</option>			
+		</select>
 		<table class ="table table-hover form-control">
 			<thead>
 				<tr>

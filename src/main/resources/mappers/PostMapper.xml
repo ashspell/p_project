@@ -64,6 +64,18 @@
  	
  	</update>
  	
+ 	<select id = "hometownpost" parameterType = "int">
+ 		SELECT
+ 			`id`,
+ 			`title`,
+ 			`content`,
+ 			`createdAt`
+ 		FROM 
+ 			`post`
+ 		WHERE
+ 			`hometown` = #{hometown}
+ 	</select>
+ 	
  	
  	
  </mapper>
