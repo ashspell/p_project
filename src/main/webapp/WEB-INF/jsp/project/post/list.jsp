@@ -70,7 +70,7 @@
 			
 			$("#hometown").on("change", function(){
 				
-				location
+				location.href("/project/list")
 				
 				
 				
