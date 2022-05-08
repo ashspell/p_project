@@ -18,7 +18,12 @@
 	
 	<div id = "wrap">
 		
-	
+		
+		
+		
+		<button type = "button">공지사항</button>
+		<button type = "button">게시판</button>
+		
 	
 	</div>
 
