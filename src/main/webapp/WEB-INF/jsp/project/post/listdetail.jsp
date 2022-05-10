@@ -26,12 +26,14 @@
 					<thead>
 						<tr>
 							<th>제목</th>
+							<th>아이디</th>
 							<th>등록일</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
 							<td>${postdetail.title }</td>
+						
 							<td><fmt:formatDate pattern ="yyyy-MM-dd" value="${postdetail.createdAt}"/></td>
 						</tr>
 					</tbody>

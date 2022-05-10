@@ -66,12 +66,13 @@
 		
 		
 	<script>
-		$(document).ready(function){
+		$(document).ready(function(){
 			
 			$("#hometown").on("change", function(){
 				
-				location.href("/project/list")
 				
+			
+				location.href = "/project/list_view?hometown=" + $(this).val();
 				
 				
 				

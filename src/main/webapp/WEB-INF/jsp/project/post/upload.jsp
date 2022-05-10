@@ -47,8 +47,6 @@
 				let content = $("#contentInput").val();
 				
 				
-			
-				
 				
 				if(title == "") {
 					alert("제목을 입력하세요");

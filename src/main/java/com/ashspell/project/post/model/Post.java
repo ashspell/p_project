@@ -6,7 +6,6 @@ public class Post {
 
 	private String id;
 	
-	private String postid;
 	
 	private String title;
 	
@@ -30,14 +29,6 @@ public class Post {
 
 	public void setId(String id) {
 		this.id = id;
-	}
-
-	public String getPostid() {
-		return postid;
-	}
-
-	public void setPostid(String postid) {
-		this.postid = postid;
 	}
 
 	public String getTitle() {

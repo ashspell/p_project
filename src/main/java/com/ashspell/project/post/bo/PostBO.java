@@ -27,7 +27,7 @@ public class PostBO {
 		
 		
 		
-		return postDAO.insertpost(title, hometown, content);
+		return postDAO.insertpost(title,  hometown, content);
 		
 	}
 	

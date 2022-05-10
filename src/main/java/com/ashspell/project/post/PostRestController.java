@@ -38,7 +38,8 @@ public class PostRestController {
 		
 		HttpSession session = request.getSession();
 		
-		String hometown = (String) session.getAttribute("hometown");
+		String hometown = (String)session.getAttribute("hometown");
+		
 		
 		Map<String, String> result = new HashMap<>();
 		
