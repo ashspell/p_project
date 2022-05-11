@@ -51,6 +51,11 @@ public class PostBO {
 		
 		return postDAO.updatepost(id, title, content, filepath);
 	}
+	
+	public List<Post> postcategory(String hometown) {
+		
+		return postDAO.postcategory(hometown);
+	}
  
 	
 	

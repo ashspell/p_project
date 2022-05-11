@@ -25,11 +25,13 @@ public class NoticeController {
 	@GetMapping("/notice_view")
 	public String noticeview(Model model ) {
 		
-
+		
 		
 		List<Notice> noticelist = noticeBO.getnoticelist();
 		
 		model.addAttribute("noticelist" ,noticelist);
+		
+		
 		
 		return"/project/notice/notice";
 		

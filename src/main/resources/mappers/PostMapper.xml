@@ -65,7 +65,7 @@
  	
  	</update>
  	
- 	<select id = "hometownpost" parameterType = "int">
+ 	<select id = "hometownpost" parameterType = "int" resultType= "com.ashspell.project.post.model.Post">
  		SELECT
  			`id`,
  			`title`,

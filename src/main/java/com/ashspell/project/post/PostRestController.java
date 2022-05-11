@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ashspell.project.post.bo.PostBO;
+import com.ashspell.project.post.model.Post;
 
 
 
@@ -103,11 +104,8 @@ public class PostRestController {
 			return result;
 		}
 		
+
 		
-		
-		
-	
-	
 
 }
 

@@ -37,11 +37,13 @@ public class PostController {
 	@GetMapping("/list_view")
 	public String listview(Model model) {
 		
+		if(hometown )	
 		List<Post> postlist = postBO.getpostlist();
 		
 		model.addAttribute("postlist", postlist);
 		
-		
+		List<Post> categorypost = postBO.postcategory();
+			
 		
 		return "/project/post/list";
 	}
@@ -68,9 +70,7 @@ public class PostController {
 	}
 	
 
-
 	
-
 	
 	
 }

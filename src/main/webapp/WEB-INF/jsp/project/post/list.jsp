@@ -45,10 +45,11 @@
 			</thead>
 			<tbody>
 				<c:forEach var = "postlist" items = "${postlist}">
+	
 				 	<tr>
 						<td>${postlist.id}</td>
 						<td><a href = "/project/listdetail_view?id=${postlist.id}">${postlist.title}</a></td>
-						<td>${postlist.hometown }</td>
+						
 						<td><fmt:formatDate pattern ="yyyy-MM-dd" value="${postlist.createdAt}"/></td>
 					</tr>
 				</c:forEach>
@@ -70,15 +71,14 @@
 			
 			$("#hometown").on("change", function(){
 				
+				let hometown = $(this).val();
 				
-			
 				location.href = "/project/list_view?hometown=" + $(this).val();
+			
+							
+		}); 
 				
-				
-				
-			}); 
-				
-		});
+	});
 	
 	
 	</script>
