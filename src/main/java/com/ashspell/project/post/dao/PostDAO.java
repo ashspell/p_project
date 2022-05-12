@@ -37,7 +37,7 @@ public interface PostDAO {
 			@Param("filepath") String filepath
 			);
 	
-	public List<Post> postcategory(@Param("hometown") String hometown);
+	public List<Post> hometownpost(@Param("hometown") String hometown);
 	
 	
 

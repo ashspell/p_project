@@ -22,6 +22,7 @@
 		<h3 class = "text-center">게시판</h3>
 		
 		<select id = "hometown">
+		
 			<option value = "전체">전체</option>
 			<option value = "경기도">경기도</option>
 			<option value = "강원도">강원도</option>
@@ -49,7 +50,7 @@
 				 	<tr>
 						<td>${postlist.id}</td>
 						<td><a href = "/project/listdetail_view?id=${postlist.id}">${postlist.title}</a></td>
-						
+						<td>${postlist.hometown }</td>
 						<td><fmt:formatDate pattern ="yyyy-MM-dd" value="${postlist.createdAt}"/></td>
 					</tr>
 				</c:forEach>
@@ -70,12 +71,10 @@
 		$(document).ready(function(){
 			
 			$("#hometown").on("change", function(){
-				
-				let hometown = $(this).val();
-				
-				location.href = "/project/list_view?hometown=" + $(this).val();
-			
-							
+					
+					location.href = "/project/list_view?hometown=" + $(this).val();
+					
+					
 		}); 
 				
 	});

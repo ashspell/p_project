@@ -65,10 +65,11 @@
  	
  	</update>
  	
- 	<select id = "hometownpost" parameterType = "int" resultType= "com.ashspell.project.post.model.Post">
+ 	<select id = "hometownpost" parameterType = "string" resultType= "com.ashspell.project.post.model.Post">
  		SELECT
  			`id`,
  			`title`,
+ 			`hometown`,
  			`content`,
  			`createdAt`
  		FROM 

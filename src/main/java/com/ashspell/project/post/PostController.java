@@ -35,21 +35,26 @@ public class PostController {
 	}
 	
 	@GetMapping("/list_view")
-	public String listview(Model model) {
+	public String listview(Model model, @RequestParam(value = "hometown", required = false) String hometown) {
 		
+		
+		if(hometown != null) {
 			
-		List<Post> postlist = postBO.getpostlist();
-		
-		model.addAttribute("postlist", postlist);
-		
-		if( ) {
-		List<Post> categorypost = postBO.postcategory(hometown);
-		
-		model.addAttribute("categorypost",categorypost);
-	
+			List<Post> categorypost = postBO.hometownpost(hometown);
+			
+			model.addAttribute("postlist", categorypost);
+				
+		}else {
+			
+			
+			List<Post> postlist = postBO.getpostlist();
+			
+			model.addAttribute("postlist", postlist);
 		}
-		
+			
 		return "/project/post/list";
+		
+		
 	}
 	
 	@GetMapping("/listdetail_view")

@@ -52,9 +52,9 @@ public class PostBO {
 		return postDAO.updatepost(id, title, content, filepath);
 	}
 	
-	public List<Post> postcategory(String hometown) {
+	public List<Post> hometownpost(String hometown) {
 		
-		return postDAO.postcategory(hometown);
+		return postDAO.hometownpost(hometown);
 	}
  
 	
